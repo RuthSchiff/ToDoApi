@@ -27,8 +27,8 @@ var app = builder.Build();
 
 // if (app.Environment.IsDevelopment())
 // {
-//     app.UseSwagger();
-//     app.UseSwaggerUI();
+    app.UseSwagger();
+    app.UseSwaggerUI();
 // }
 
 app.UseCors("all");
@@ -44,7 +44,7 @@ app.MapPost("/register/{Name}/{Password}", async (string Name, string Password, 
 {
     if (string.IsNullOrEmpty(Name) || string.IsNullOrEmpty(Password))
     {
-        return Results.BadRequest("Name and password are required.");
+             return Results.BadRequest("Name and password are required.");
     }
 
     User u = new User() { Name = Name, Password = Password };
