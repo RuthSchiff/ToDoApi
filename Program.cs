@@ -25,11 +25,11 @@ builder.Services.AddCors(x => x.AddPolicy("all", a => a.AllowAnyHeader()
 
 var app = builder.Build();
 
-if (app.Environment.IsDevelopment())
-{
-    app.UseSwagger();
-    app.UseSwaggerUI();
-}
+// if (app.Environment.IsDevelopment())
+// {
+//     app.UseSwagger();
+//     app.UseSwaggerUI();
+// }
 
 app.UseCors("all");
 app.UseHttpsRedirection();
