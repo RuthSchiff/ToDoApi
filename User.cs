@@ -1,13 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace TodoApi;
-
-public partial class User
+namespace TodoApi
 {
-    public int Id { get; set; }
-
-    public string Name { get; set; } = null!;
-
-    public string Password { get; set; } = null!;
+    public class User
+    {
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public string Password { get; set; }
+    }
 }
